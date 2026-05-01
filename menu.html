@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Chicken Express</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="menu-page">
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="https://cdn.brandfetch.io/chickene.com/w/400/h/400/logo" alt="Chicken Express" onerror="this.outerHTML='<span class=\'logo-text\'>CHICKEN<br>EXPRESS</span>'" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="index.html#story" class="nav-link">Our Story</a>
+        <a href="index.html#locations" class="nav-link">Locations</a>
+        <a href="index.html#app" class="nav-link">Download App</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="menu.html" class="btn-order">Order Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="index.html#app">Download App</a>
+      <a href="menu.html" class="mobile-order-btn">Order Now</a>
+    </nav>
+  </div>
+
+  <!-- MENU HERO -->
+  <div class="menu-hero">
+    <div class="menu-hero-bg">
+      <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=1600&q=80&fit=crop" alt="Menu" />
+      <div class="menu-hero-overlay"></div>
+    </div>
+    <div class="menu-hero-text">
+      <h1>Our Menu</h1>
+      <p>Real food. Real flavor. Texas-made.</p>
+    </div>
+  </div>
+
+  <!-- STICKY CATEGORY NAV -->
+  <nav class="cat-nav" id="catNav">
+    <div class="cat-nav-inner">
+      <a href="#combos" class="cat-nav-pill active" data-section="combos">Combos</a>
+      <a href="#family" class="cat-nav-pill" data-section="family">Family Meals</a>
+      <a href="#fish" class="cat-nav-pill" data-section="fish">Fish</a>
+      <a href="#sides" class="cat-nav-pill" data-section="sides">Sides</a>
+      <a href="#drinks" class="cat-nav-pill" data-section="drinks">Drinks</a>
+      <a href="#desserts" class="cat-nav-pill" data-section="desserts">Desserts</a>
+    </div>
+  </nav>
+
+  <!-- MENU CONTENT -->
+  <main class="menu-main">
+
+    <!-- COMBOS -->
+    <section class="menu-section" id="combos">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Combos</h2>
+          <p>Every combo comes with two regular sides of your choice.</p>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-badge">🏆 #1 Most Liked</div>
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=500&h=350&fit=crop&q=80" alt="4 Express Tender Combo" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#1 — 4 Express Tender Combo</h3>
+              <p>4 golden crispy tenders with your choice of two regular sides and a dipping sauce.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$13.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '4 Express Tender Combo', 13.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=500&h=350&fit=crop&q=80" alt="7 Express Tender Combo" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#2 — 7 Express Tender Combo</h3>
+              <p>7 crispy tenders with your choice of two regular sides. Perfect for sharing.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$19.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '7 Express Tender Combo', 19.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&h=350&fit=crop&q=80" alt="3PC Mixed Chicken" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#3 — 3PC Mixed Chicken Combo</h3>
+              <p>Your choice of 3 pieces of bone-in chicken with two regular sides.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$14.49</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '3PC Mixed Chicken Combo', 14.49)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500&h=350&fit=crop&q=80" alt="2PC Mixed Chicken" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#4 — 2PC Mixed Chicken Combo</h3>
+              <p>Your choice of 2 pieces of bone-in chicken with two regular sides.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$12.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '2PC Mixed Chicken Combo', 12.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=350&fit=crop&q=80" alt="Liver Gizzard Combo" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#5 — Liver/Gizzard Combo</h3>
+              <p>A Texas classic. Crispy liver or gizzard with two regular sides.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$12.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Liver/Gizzard Combo', 12.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILY MEALS -->
+    <section class="menu-section alt-bg" id="family">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Family Meals</h2>
+          <p>Feed the whole crew. Every family meal includes your choice of family-size sides.</p>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=500&h=350&fit=crop&q=80" alt="8PC Chicken Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#8 — 8PC Chicken Family Meal</h3>
+              <p>8 pieces of bone-in chicken with family-size sides. Feeds 3–4.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$30.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '8PC Chicken Family Meal', 30.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&h=350&fit=crop&q=80" alt="12PC Chicken Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#12 — 12PC Chicken Family Meal</h3>
+              <p>12 pieces of bone-in chicken with family-size sides. Feeds 5–6.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$39.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '12PC Chicken Family Meal', 39.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&h=350&fit=crop&q=80" alt="16PC Chicken Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#16 — 16PC Chicken Family Meal</h3>
+              <p>16 pieces of bone-in chicken with family-size sides. Feeds 7–8.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$49.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '16PC Chicken Family Meal', 49.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-badge">Best Value</div>
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=500&h=350&fit=crop&q=80" alt="20PC Tender Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#20 — 20PC Tender Family Meal</h3>
+              <p>20 express tenders with family-size sides. The crowd pleaser.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$49.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '20PC Tender Family Meal', 49.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=500&h=350&fit=crop&q=80" alt="25PC Tender Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#25 — 25PC Tender Family Meal</h3>
+              <p>25 express tenders with family-size sides. Built for big gatherings.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$59.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '25PC Tender Family Meal', 59.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079?w=500&h=350&fit=crop&q=80" alt="30PC Tender Family Meal" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>#30 — 30PC Tender Family Meal</h3>
+              <p>30 express tenders with family-size sides. Go big or go home.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$79.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '30PC Tender Family Meal', 79.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FISH -->
+    <section class="menu-section" id="fish">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Fish</h2>
+          <p>Golden fried fish fillets — a Texas coastal classic.</p>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=500&h=350&fit=crop&q=80" alt="2 Piece Fish Combo" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>2 Piece Fish Combo</h3>
+              <p>2 crispy fish fillets with your choice of two regular sides.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$12.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '2 Piece Fish Combo', 12.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=500&h=350&fit=crop&q=80" alt="3 Piece Fish Combo" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>3 Piece Fish Combo</h3>
+              <p>3 crispy fish fillets with your choice of two regular sides.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$14.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, '3 Piece Fish Combo', 14.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDES -->
+    <section class="menu-section alt-bg" id="sides">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Sides</h2>
+          <p>Available in Regular and Family sizes.</p>
+        </div>
+        <div class="menu-grid sides-grid">
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&h=300&fit=crop&q=80" alt="French Fries" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>French Fries</h3>
+              <p>Golden, crispy, and perfectly salted.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'French Fries', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=500&h=300&fit=crop&q=80" alt="Mashed Potatoes & Gravy" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Mashed Potatoes &amp; Gravy</h3>
+              <p>Creamy mashed potatoes smothered in homestyle gravy.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Mashed Potatoes & Gravy', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1574926054530-4c87f5f6aaee?w=500&h=300&fit=crop&q=80" alt="Fried Okra" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Fried Okra</h3>
+              <p>A Southern staple — crispy and irresistible.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Fried Okra', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1512058556646-c4da40fba323?w=500&h=300&fit=crop&q=80" alt="Cole Slaw" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Cole Slaw</h3>
+              <p>Fresh and creamy homestyle cole slaw.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Cole Slaw', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=500&h=300&fit=crop&q=80" alt="Mac & Cheese" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Mac &amp; Cheese</h3>
+              <p>Rich, creamy, cheesy — comfort in every bite.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Mac & Cheese', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop&q=80" alt="Jalapeño Poppers" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Jalapeño Poppers</h3>
+              <p>Spicy jalapeños stuffed with cream cheese and fried golden.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Jalapeño Poppers', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=500&h=300&fit=crop&q=80" alt="Corn on the Cob" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Corn on the Cob</h3>
+              <p>Sweet, buttered corn on the cob — summer on a stick.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Corn on the Cob', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card side-item-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=500&h=300&fit=crop&q=80" alt="Green Beans" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Fried Green Beans</h3>
+              <p>Lightly battered and fried to crispy perfection.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.99 / $5.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Fried Green Beans', 2.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DRINKS -->
+    <section class="menu-section" id="drinks">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Drinks</h2>
+          <p>The South's best iced tea — brewed fresh daily.</p>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&h=350&fit=crop&q=80" alt="Sweet Iced Tea" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Sweet Iced Tea</h3>
+              <p>Brewed fresh daily. The South's best iced tea, now in three sizes.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$0.89 – $1.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Sweet Iced Tea', 0.89)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=350&fit=crop&q=80" alt="Unsweet Iced Tea" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Unsweet Iced Tea</h3>
+              <p>Pure brewed tea, no sugar. Refreshing and clean.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$0.89 – $1.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Unsweet Iced Tea', 0.89)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1530695440407-21fef47230b1?w=500&h=350&fit=crop&q=80" alt="Fountain Drinks" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Fountain Drinks</h3>
+              <p>Coke, Diet Coke, Dr. Pepper, Sprite, and more.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$0.89 – $1.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Fountain Drink', 0.89)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&h=350&fit=crop&q=80" alt="Tea by the Gallon" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Tea by the Gallon</h3>
+              <p>Sweet or unsweet, fresh-brewed iced tea by the gallon for the whole family.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$5.99 – $12.00</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Tea by the Gallon', 5.99)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DESSERTS -->
+    <section class="menu-section alt-bg" id="desserts">
+      <div class="container">
+        <div class="menu-section-header">
+          <h2>Desserts</h2>
+          <p>End it sweet.</p>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=350&fit=crop&q=80" alt="Chocolate Chip Cookie" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Chocolate Chip Cookie</h3>
+              <p>Warm, gooey, and baked to perfection. One or a box of six.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.00 / $7.99</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Chocolate Chip Cookie', 2.00)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=500&h=350&fit=crop&q=80" alt="Apple Pie" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Apple Pie</h3>
+              <p>Golden-fried apple pie — a classic Southern finish.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.00 / $5.49</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Apple Pie', 2.00)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=350&fit=crop&q=80" alt="Cherry Pie" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <h3>Cherry Pie</h3>
+              <p>Sweet cherry filling in a crispy fried crust. One or four.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">$2.00 / $5.49</span>
+                <button class="btn-add-cart" onclick="addToCart(this, 'Cherry Pie', 2.00)">Add +</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="cart-close" id="cartClose">&#x2715;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Add some items!</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <a href="https://chickene.com/" target="_blank" rel="noopener" class="btn-primary cart-checkout">Checkout on chickene.com</a>
+    </div>
+  </div>
+
+  <!-- FLOATING CART BUTTON -->
+  <button class="cart-fab" id="cartFab" aria-label="View cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://cdn.brandfetch.io/chickene.com/w/400/h/400/logo" alt="Chicken Express" class="footer-logo" onerror="this.outerHTML='<span class=\'footer-logo-text\'>CHICKEN EXPRESS</span>'" />
+        <p>Our Chicken Can't Fly,<br />So We Deliver.</p>
+        <div class="social-links">
+          <a href="https://chickene.com/" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://chickene.com/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://chickene.com/" aria-label="Twitter" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <a href="#combos">Combos</a>
+          <a href="#family">Family Meals</a>
+          <a href="#fish">Fish</a>
+          <a href="#sides">Sides</a>
+          <a href="#drinks">Drinks</a>
+          <a href="#desserts">Desserts</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="https://chickene.com/page/our-story" target="_blank" rel="noopener">Our Story</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Locations</a>
+          <a href="https://chickene.com/page/nutrition" target="_blank" rel="noopener">Nutrition</a>
+          <a href="https://chickene.com/page/contact" target="_blank" rel="noopener">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Order</h4>
+          <a href="https://chickene.com/page/download-app" target="_blank" rel="noopener">Download App</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Order Pickup</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Order Delivery</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Chicken Express. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="https://chickene.com/" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://chickene.com/" target="_blank" rel="noopener">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

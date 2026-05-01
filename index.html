@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chicken Express — Our Chicken Can't Fly, So We Deliver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="https://cdn.brandfetch.io/chickene.com/w/400/h/400/logo" alt="Chicken Express" onerror="this.outerHTML='<span class=\'logo-text\'>CHICKEN<br>EXPRESS</span>'" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#locations" class="nav-link">Locations</a>
+        <a href="#app" class="nav-link">Download App</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="menu.html" class="btn-order">Order Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#locations">Locations</a>
+      <a href="#app">Download App</a>
+      <a href="menu.html" class="mobile-order-btn">Order Now</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=1920&q=85&fit=crop" alt="Crispy Fried Chicken" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">Texas Original Since 1988</span>
+      <h1 class="hero-title">Our Chicken<br /><em>Can't Fly,</em><br />So We Deliver</h1>
+      <p class="hero-sub">250+ locations. Legendary tenders. The South's best iced tea.</p>
+      <div class="hero-ctas">
+        <a href="menu.html" class="btn-primary">Order Now</a>
+        <a href="menu.html" class="btn-outline">View Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24"><path d="M8 0v20M2 14l6 8 6-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- CATEGORY STRIP -->
+  <section class="category-strip">
+    <div class="strip-inner">
+      <h2 class="strip-heading">What Are You Craving?</h2>
+      <div class="categories-scroll">
+        <a href="menu.html#combos" class="cat-pill active">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=120&h=120&fit=crop&q=80" alt="Combos" />
+          </div>
+          <span>Combos</span>
+        </a>
+        <a href="menu.html#family" class="cat-pill">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=120&h=120&fit=crop&q=80" alt="Family Meals" />
+          </div>
+          <span>Family Meals</span>
+        </a>
+        <a href="menu.html#sides" class="cat-pill">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=120&h=120&fit=crop&q=80" alt="Sides" />
+          </div>
+          <span>Sides</span>
+        </a>
+        <a href="menu.html#drinks" class="cat-pill">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=120&h=120&fit=crop&q=80" alt="Drinks" />
+          </div>
+          <span>Drinks</span>
+        </a>
+        <a href="menu.html#desserts" class="cat-pill">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=120&h=120&fit=crop&q=80" alt="Desserts" />
+          </div>
+          <span>Desserts</span>
+        </a>
+        <a href="menu.html#fish" class="cat-pill">
+          <div class="cat-img">
+            <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=120&h=120&fit=crop&q=80" alt="Fish" />
+          </div>
+          <span>Fish</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ITEMS -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Most Loved</h2>
+        <a href="menu.html" class="see-all">See Full Menu →</a>
+      </div>
+      <div class="items-grid">
+
+        <div class="item-card">
+          <div class="card-badge">🏆 #1 Most Liked</div>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=500&h=360&fit=crop&q=80" alt="4 Express Tender Combo" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>4 Express Tender Combo</h3>
+            <p>4 golden tenders with your choice of two regular sides and a sauce.</p>
+            <div class="card-footer">
+              <span class="price">$13.99</span>
+              <a href="menu.html#combos" class="btn-add">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&h=360&fit=crop&q=80" alt="3PC Mixed Chicken Combo" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>3PC Mixed Chicken Combo</h3>
+            <p>3 pieces of your choice of our bone-in chicken with two regular sides.</p>
+            <div class="card-footer">
+              <span class="price">$14.49</span>
+              <a href="menu.html#combos" class="btn-add">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=500&h=360&fit=crop&q=80" alt="8PC Family Meal" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>8PC Chicken Family Meal</h3>
+            <p>8 pieces of bone-in chicken with your choice of family-size sides.</p>
+            <div class="card-footer">
+              <span class="price">$30.99</span>
+              <a href="menu.html#family" class="btn-add">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=500&h=360&fit=crop&q=80" alt="3 Piece Fish Combo" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>3 Piece Fish Combo</h3>
+            <p>3 crispy fish fillets with two regular sides — a Texas coastal classic.</p>
+            <div class="card-footer">
+              <span class="price">$14.99</span>
+              <a href="menu.html#fish" class="btn-add">Order</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TENDER BANNER -->
+  <section class="promo-banner">
+    <div class="promo-inner">
+      <div class="promo-text">
+        <span class="promo-label">Limited Time</span>
+        <h2>7 Express Tenders<br />for the whole crew</h2>
+        <p>7 golden tenders, two regular sides, your choice of sauce. Feed the table.</p>
+        <a href="menu.html#combos" class="btn-primary">Get the Deal — $19.99</a>
+      </div>
+      <div class="promo-img">
+        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=700&h=500&fit=crop&q=85" alt="7 Express Tenders" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDES SPOTLIGHT -->
+  <section class="sides-section" id="sides-spotlight">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Famous Sides</h2>
+        <a href="menu.html#sides" class="see-all">View All Sides →</a>
+      </div>
+      <div class="sides-scroll">
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&h=300&fit=crop&q=80" alt="French Fries" />
+          <span>French Fries</span>
+        </div>
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&h=300&fit=crop&q=80" alt="Mashed Potatoes" />
+          <span>Mashed Potatoes<br />&amp; Gravy</span>
+        </div>
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1512058556646-c4da40fba323?w=300&h=300&fit=crop&q=80" alt="Cole Slaw" />
+          <span>Cole Slaw</span>
+        </div>
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1574926054530-4c87f5f6aaee?w=300&h=300&fit=crop&q=80" alt="Fried Okra" />
+          <span>Fried Okra</span>
+        </div>
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&q=80" alt="Jalapeño Poppers" />
+          <span>Jalapeño<br />Poppers</span>
+        </div>
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=300&h=300&fit=crop&q=80" alt="Mac & Cheese" />
+          <span>Mac &amp; Cheese</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story" id="story">
+    <div class="story-inner">
+      <div class="story-text">
+        <span class="eyebrow">Texas Original</span>
+        <h2>Born in Texas.<br />Built on Flavor.</h2>
+        <p>Chicken Express has been serving up legendary fried chicken tenders, crispy fish, and the South's best iced tea since 1988. Family-owned and Texas-proud, we've grown to 250+ locations — but every plate still tastes like home.</p>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-num">250+</span>
+            <span class="stat-label">Locations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1988</span>
+            <span class="stat-label">Founded</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Texas</span>
+            <span class="stat-label">Proud</span>
+          </div>
+        </div>
+        <a href="menu.html" class="btn-primary">Start Your Order</a>
+      </div>
+      <div class="story-img">
+        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=700&h=800&fit=crop&q=85" alt="Chicken Express Story" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ICED TEA BANNER -->
+  <section class="tea-banner">
+    <div class="tea-content">
+      <h2>The South's Best<br /><span>Iced Tea</span></h2>
+      <p>Brewed fresh every day. Sweet, unsweet, or half and half — only $1.59 for a 32oz.</p>
+      <a href="menu.html#drinks" class="btn-outline-dark">Order a Tea</a>
+    </div>
+    <div class="tea-img">
+      <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&h=500&fit=crop&q=85" alt="Iced Tea" />
+    </div>
+  </section>
+
+  <!-- DOWNLOAD APP -->
+  <section class="app-section" id="app">
+    <div class="container">
+      <div class="app-inner">
+        <div class="app-text">
+          <span class="eyebrow">Go Mobile</span>
+          <h2>Order Faster with<br />the Chicken Express App</h2>
+          <p>Skip the wait. Order ahead for pickup or delivery straight to your door. Exclusive deals and your favorite order, one tap away.</p>
+          <div class="app-badges">
+            <a href="https://chickene.com/page/download-app" class="app-badge apple">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div><small>Download on the</small><strong>App Store</strong></div>
+            </a>
+            <a href="https://chickene.com/page/download-app" class="app-badge google">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.37.2.8.21 1.19.03l12.16-6.95L13.37 12l-10.19 11.76zM20.6 9.7L17.3 7.84 13.81 12l3.49 4.16 3.3-1.89c.94-.54.94-1.99 0-2.57zM1.01 1.17C.96 1.35.93 1.55.93 1.77v20.46c0 .22.03.42.08.6L12.6 12 1.01 1.17zm11.37.25L1.19.21C.8.03.37.04 0 .24L12.38 12z"/></svg>
+              <div><small>Get it on</small><strong>Google Play</strong></div>
+            </a>
+          </div>
+        </div>
+        <div class="app-img">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=700&fit=crop&q=80" alt="Mobile App" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS STRIP -->
+  <section class="locations-strip" id="locations">
+    <div class="container">
+      <h2>Find Your Nearest<br /><span>Chicken Express</span></h2>
+      <p>Over 250 locations across Texas and the South. Pickup or delivery — we've got you covered.</p>
+      <a href="https://chickene.com/" target="_blank" rel="noopener" class="btn-primary">Find a Location</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://cdn.brandfetch.io/chickene.com/w/400/h/400/logo" alt="Chicken Express" class="footer-logo" onerror="this.outerHTML='<span class=\'footer-logo-text\'>CHICKEN EXPRESS</span>'" />
+        <p>Our Chicken Can't Fly,<br />So We Deliver.</p>
+        <div class="social-links">
+          <a href="https://chickene.com/" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://chickene.com/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://chickene.com/" aria-label="Twitter" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <a href="menu.html#combos">Combos</a>
+          <a href="menu.html#family">Family Meals</a>
+          <a href="menu.html#fish">Fish</a>
+          <a href="menu.html#sides">Sides</a>
+          <a href="menu.html#drinks">Drinks</a>
+          <a href="menu.html#desserts">Desserts</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="https://chickene.com/page/our-story" target="_blank" rel="noopener">Our Story</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Locations</a>
+          <a href="https://chickene.com/page/nutrition" target="_blank" rel="noopener">Nutrition</a>
+          <a href="https://chickene.com/page/contact" target="_blank" rel="noopener">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Order</h4>
+          <a href="https://chickene.com/page/download-app" target="_blank" rel="noopener">Download App</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Order Pickup</a>
+          <a href="https://chickene.com/" target="_blank" rel="noopener">Order Delivery</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Chicken Express. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="https://chickene.com/" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://chickene.com/" target="_blank" rel="noopener">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
