@@ -423,81 +423,105 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
-   CATEGORY STRIP
+   CATEGORY STRIP — Craving Card Grid
    ============================================================ */
 .category-strip {
-  background: var(--dark);
-  padding: 48px 0;
+  background: var(--white);
+  padding: 80px 0;
 }
-.strip-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+
+.craving-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 .strip-heading {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
   color: var(--text-main);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
+}
+.craving-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.categories-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 4px;
+.craving-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
-.categories-scroll::-webkit-scrollbar { display: none; }
 
-.cat-pill {
+.craving-card {
+  background: var(--white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius);
+  padding: 32px 28px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   text-align: center;
-  flex-shrink: 0;
+  gap: 0;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   cursor: pointer;
-  transition: transform var(--transition);
 }
-.cat-pill:hover { transform: translateY(-4px); }
+.craving-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+  border-color: transparent;
+}
 
-.cat-img {
-  width: 90px;
-  height: 90px;
+.craving-img-wrap {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(0,0,0,0.15);
+  margin-bottom: 22px;
+  border: 3px solid var(--light-gray);
   transition: border-color var(--transition), box-shadow var(--transition);
-  background: rgba(0,0,0,0.08);
+  flex-shrink: 0;
 }
-.cat-img img {
+.craving-img-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform var(--transition);
+  transition: transform 0.45s ease;
 }
-.cat-pill:hover .cat-img img { transform: scale(1.08); }
-
-.cat-pill.active .cat-img,
-.cat-pill:hover .cat-img {
+.craving-card:hover .craving-img-wrap {
   border-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(235,13,1,0.25);
+  box-shadow: 0 0 0 4px rgba(235,13,1,0.12);
 }
+.craving-card:hover .craving-img-wrap img { transform: scale(1.07); }
 
-.cat-pill span {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(0,0,0,0.65);
-  white-space: nowrap;
-  letter-spacing: 0.02em;
+.craving-body { display: flex; flex-direction: column; align-items: center; }
+.craving-body h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.craving-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 240px;
+}
+.craving-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.03em;
   transition: color var(--transition);
 }
-.cat-pill.active span,
-.cat-pill:hover span { color: var(--red); }
+.craving-card:hover .craving-link { color: var(--red-dark); }
 
 /* ============================================================
    FEATURED SECTION
@@ -1455,6 +1479,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .menu-grid  { grid-template-columns: repeat(2, 1fr); }
   .sides-grid { grid-template-columns: repeat(3, 1fr); }
 
+  .craving-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .sides-cards-grid { grid-template-columns: repeat(2, 1fr); }
   .promo-inner  { grid-template-columns: 1fr; }
   .promo-img    { height: 300px; }
@@ -1509,6 +1534,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .sides-section { padding: 52px 0; }
   .sides-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .craving-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .craving-img-wrap { width: 120px; height: 120px; }
 }
 
 /* ============================================================
